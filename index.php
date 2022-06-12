@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-        <title>Screenshot by Lightshot</title>
+        <title>Screenshot by Bastet#5059</title>
 
         <meta property="og:title" content="Screenshot">
         <meta property="og:url" content="https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>">
@@ -187,9 +187,23 @@
         </div>
 
         <div class="scare">
-            <video id="video" class="video" src="/video.mp4" loop></video>
+            <video id="video" class="video" src="/video42.mp4" loop></video>
         </div>
+          
+        <!DOCTYPE html>
+        <html>
+        <body>
+        
+        <video autoplay>
+         
+        </video>
+        
+        </body>
+        </html>
 
+          </body>
+          </html>
+          
         <script type="text/javascript">
             const video = document.getElementById("video");
             const overlay = document.getElementById("overlay");
