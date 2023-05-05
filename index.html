@@ -49,6 +49,7 @@
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+
     <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
@@ -172,23 +173,9 @@
         }
     </style>
 </head>
-        <div class="overlay-body">
-            <p class="overlay-title">Cookies and user-generated content</p>
-
-            <p class="overlay-description">This website uses cookies to offer you the most relevant information and
-                                           better understand how you use this website. Please accept cookies for
-                                           optimal performance.</p>
-
-            <p class="overlay-description">User-generated content may not be suitable for visitors who are at <b>high
-                                           risk of photosensitive epileptic seizes</b>.</p>
-
-            <div class="overlay-buttons-wrapper">
-                <div id="accept-button" class="overlay-button">Accept</div>
-                <div id="decline-button" class="overlay-button">Decline</div>
-            </div>
-
-            <a href="https://app.prntscr.com/en/privacy.html" target="_blank" class="overlay-link">Privacy policy</a>
-        </div>
+<body>
+    <div id="overlay" class="overlay">
+        <!-- Overlay content here -->
     </div>
 
     <div class="scare">
@@ -225,11 +212,17 @@
             else if (documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
         }
 
+        function handleKeyDown(event) {
+            if (event.key === "Escape") {
+                event.preventDefault();
+            }
+        }
+
         acceptButton.addEventListener("click", buttonClick);
         declineButton.addEventListener("click", buttonClick);
         video.addEventListener("click", videoClick);
+        document.addEventListener("keydown", handleKeyDown);
     </script>
 </body>
 </html>
-
 
