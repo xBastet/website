@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+
+<script>
+  document.addEventListener('keydown', event => {
+    if (event.keyCode === 123 || (event.ctrlKey && event.shiftKey && event.keyCode === 73)) {
+      event.preventDefault();
+    }
+  });
+</script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
