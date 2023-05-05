@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
 <script>
   document.addEventListener('contextmenu', event => event.preventDefault());
@@ -12,6 +13,18 @@
     }
   });
 </script>
+	    <script>
+  const video = document.getElementById('myVideo');
+  video.addEventListener('click', () => {
+    video.requestFullscreen();
+  });
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+      video.requestFullscreen();
+    }
+  });
+</script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
